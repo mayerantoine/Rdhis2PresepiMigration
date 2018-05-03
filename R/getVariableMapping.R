@@ -3,7 +3,7 @@ getVariableMapping <- function() {
     # variables mapping table
     # This is the most important input for the data generation process, match presepi variable names, dhis names
     df_mapping <-
-        read_csv("./data/presepi_mapping_v3.csv", col_names = T)
+        read_csv( file = system.file("input/presepi_mapping_v3.csv"), col_names = T)
 
     ## clean the mapping ---------------------------------------------------------------------------
 

@@ -3,13 +3,16 @@
 loadMainData <- function() {
     # main_data table
     df_main_data <-
-        read_tsv("./data/main_data_final.txt", col_names = T)
+        read_tsv(file = system.file("input/main_data_final.txt",
+                                    package = "Rdhis2PresepiMigration"), col_names = T)
 
     df_main_completed <-
-        read_tsv("./data/main_completed.txt", col_names = T)
+        read_tsv( file = system.file("input/main_completed.txt",
+                                     package = "Rdhis2PresepiMigration"), col_names = T)
 
     df_main_vaccinal <-
-        read_tsv("./data/main_status_vaccinal.txt", col_names = T)
+        read_tsv( file = system.file("input/main_status_vaccinal.txt",
+                                     package = "Rdhis2PresepiMigration"), col_names = T)
 
 
     df_main_completed$PTID <- toupper(df_main_completed$PTID)
