@@ -1,0 +1,11 @@
+Package: Rdhis2PresepiMigration
+Type: Package
+Title: Migrate data from PresePI to DHIS2 Tracker
+Version: 0.1.0
+Author: Mayer Antoine
+Maintainer: Mayer Antoine <mayerantoine@gmail.com>
+Description: Migrate data from PresePI to DHIS2 Tracker
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: RCurl, XML, tidyverse
