@@ -1,4 +1,8 @@
-
+#' Download the Tracked Entity Id
+#'
+#'
+#'
+#' @return DHIS2 Id for the tracked Entity
 getTrackedEntity <- function() {
 
     url_id <-

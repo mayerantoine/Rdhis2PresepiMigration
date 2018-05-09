@@ -1,3 +1,10 @@
+#' Enroll Tracked Entity Instance in the Program Presepi
+#'
+#'
+#' @param payload list
+#'
+#' @return the enrollment id or try-error if failed
+
 
 enrollInProgram <- function(payload) {
     url_enrol <- "http://209.61.231.45:8082/dhis/api/enrollments"

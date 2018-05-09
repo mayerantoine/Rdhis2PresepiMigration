@@ -1,5 +1,7 @@
-
-
+#' Download all orgunits of the Presepi Program
+#'
+#'
+#' @return the dataframe with orgunits of the Presepi program df_orgunits
 
 getOrgunits <- function(){
 

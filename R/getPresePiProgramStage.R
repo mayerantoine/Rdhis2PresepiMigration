@@ -1,16 +1,19 @@
+#' Download all program stages dataelements
+#'
+#' For a vector of ProgramStage Id download the data elements for each program stage
+#'
+#' @param ProgramStageId vector
+#'
+#' @return the dataframe with program stages dataelements of the Presepi program df_programStageDataElement
 
-## Get a programStage -------------------------------------------------------
-# http://209.61.231.45:8082/dhis/api/programStages/Li8CKAWWS1q
-# mapping each programStage with his dataelement
+
+
 
 
 getPresePiProgramStage <- function(ProgramStageId) {
 
     base_url <- "http://209.61.231.45:8082/dhis/api/programStages/"
     #http://209.61.231.45:8082/dhis/api/programStages/Li8CKAWWS1q.json?fields=id,name,programStageDataElements[id]
-
-    #how does map work, map_df, do.call vs lapply
-    # how to return a dataframe
 
     programStageDataElements_list <- map(ProgramStageId, function(x) {
         stage <- x

@@ -1,5 +1,7 @@
-
-
+#' Query and Download the data for and URL
+#'
+#' @param x urlstring string
+#' @return The xmlRoot node of the \code{urlstring}
 queryURL <- function(urlstring){
 
     url_id <- urlstring
@@ -22,6 +24,8 @@ queryURL <- function(urlstring){
         stop("Cannot connect")
 
     }
+
+    ##if not XML
     doc_id <- xmlTreeParse(entity_response, useInternalNodes = T)
     root_id <- xmlRoot(doc_id)
 

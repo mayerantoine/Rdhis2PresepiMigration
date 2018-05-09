@@ -1,17 +1,23 @@
+#' Import variables mapping files
+#'
+#' Tis is the most important input for the data generation process, match presepi variable names, dhis names
+#' removing NA values and any trailing spaces at the end of dataelements
+#' this exclude presepi variable that are not mapped in dhis2 those data will not be transfered
+#' This clean the mapping keeping only variables in presepi that we can find in the data load
+#' check and allow us to double check if the mapping file is in sync whith the data imported because
+#' the mapping file was not done from the main_data file
+#'
+#'
+#'
+#' @return the  mapping table df_mapping
+
+
 
 getVariableMapping <- function() {
-    # variables mapping table
-    # This is the most important input for the data generation process, match presepi variable names, dhis names
+
     df_mapping <-
         read_csv( file = system.file("input/presepi_mapping_v3.csv"), col_names = T)
 
-    ## clean the mapping ---------------------------------------------------------------------------
-
-    # removing NA values and any trailing spaces at the end of dataelements
-    # this exclude presepi variable that are not mapped in dhis2 those data will not be transfered
-    # This clean the mapping keeping only variables in presepi that we can find in the data load
-    # check and allow us to double check if the mapping file is in sync whith the data imported because
-    # the mapping file was not done from the main_data file
 
     df_mapping <-  df_mapping %>%
 

@@ -1,3 +1,10 @@
+#' Retrieve the enrollment Id for a Tracked Entity Instance
+#'
+#' @param tei string
+#' @param ou string
+#'
+#' @return DHIS2 enrollement Id for the Tracked Entity Instance
+
 
 getEnrollmentId <- function(tei,ou){
 

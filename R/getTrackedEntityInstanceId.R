@@ -1,4 +1,9 @@
-
+#' Retrieve the instance Id for a patient
+#'
+#' @param patientId string
+#' @param ou string
+#'
+#' @return DHIS2 Id for the tracked Entity instance
 
 getTrackedEntityInstanceId <- function(patientId,ou){
 

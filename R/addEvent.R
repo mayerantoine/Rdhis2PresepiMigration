@@ -1,5 +1,9 @@
 
-
+#' Add event to a Tracked Entity an Instance of the the Program Presepi
+#'
+#' @param payload list
+#'
+#' @return the eventId id or try-error if failed
 addEvent <- function(payload) {
     url_event <- "http://209.61.231.45:8082/dhis/api/events"
 

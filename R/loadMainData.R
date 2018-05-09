@@ -1,4 +1,9 @@
-
+#' Import data to migrate
+#'
+#' This function import the main table,the completed table and the status_vaccinal table
+#'  merge in one table, perform the cleaning and add calculated variables
+#'
+#' @return the main data table df_main_data
 
 loadMainData <- function() {
     # main_data table

@@ -1,7 +1,9 @@
+#' Add Tracked Entity Instance to the the Program Presepi
+#'
+#' @param payload list
+#'
+#' @return the tei id or try-error if failed
 
-
-# POST trackedEntityInstances
-# Return Instances Id if success and error if not
 addTrackedEntityInstance <- function(payload) {
     url <- "http://209.61.231.45:8082/dhis/api/trackedEntityInstances"
     #payload <- data[[1]]

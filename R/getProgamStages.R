@@ -1,4 +1,7 @@
-
+#' Download all program stages of the Presepi Program
+#'
+#'
+#' @return the dataframe with program stages of the Presepi program df_programStage
 
 
 getProgamStages <- function() {
