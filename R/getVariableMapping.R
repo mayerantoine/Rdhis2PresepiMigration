@@ -16,7 +16,8 @@
 getVariableMapping <- function() {
 
     df_mapping <-
-        read_csv( file = system.file("input/presepi_mapping_v3.csv"), col_names = T)
+        read_csv( file = system.file("input/presepi_mapping_v3.csv",
+                                     package = "Rdhis2PresepiMigration"), col_names = T)
 
 
     df_mapping <-  df_mapping %>%

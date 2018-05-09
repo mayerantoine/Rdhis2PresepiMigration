@@ -1,12 +1,25 @@
+#' Get the data to generate file as a list
+#'
+#' Using a transpose dataframe of the subset of the main data and transform it as a list use
+#' to generate the json file
+#'
+#' @param  df_main_data list
+#'
+#' @return the data list to be save as json
 
-
-
-## Use transpose main data,df_mapping, and df_programStage
 getDataList <-  function(tr_main_data)   {
     main_list <-  map(tr_main_data, function(x) {
-        instance <-
+        # instance <-
+        #     list(
+        #         instance_attribute = list(orgunit = as.character(x[["orgunitsId"]]),
+        #                                   enrollmentdate = x[["DateFrm"]]),
+        #         attributes = list(),
+        #         ProgramStages = list()
+        #     )
+
+         instance <-
             list(
-                instance_attribute = list(orgunit = as.character(x[["orgunitsId"]]),
+                instance_attribute = list(orgunit = as.character("pzEzEqZMwSP"),
                                           enrollmentdate = x[["DateFrm"]]),
                 attributes = list(),
                 ProgramStages = list()
@@ -60,7 +73,7 @@ getDataList <-  function(tr_main_data)   {
                 ProgramStage[["events"]][["attrs"]] <-
                     list(
                         program = presePiId,
-                        orgunit = as.character(x[["orgunitsId"]]),
+                        orgunit = as.character("pzEzEqZMwSP"),
                         eventDate = x[["DateFrm"]]
                     )
 

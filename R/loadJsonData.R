@@ -1,7 +1,8 @@
 
 
-loadJsonData <- function() {
-    jsonData <- read_json("processed_data/output/HSD_2017_9.json")
+loadJsonData <- function(json_file) {
+    #jsonData <- read_json("processed_data/output/HSD_2017_9.json")
+    jsonData <- read_json(json_file)
 
     map(jsonData,  function(x) {
         orgunit <- x$instance_attribute$orgunit[[1]]
@@ -25,11 +26,10 @@ loadJsonData <- function() {
 
         ## add TrackedEntity Instances
         ## use try or trycatch
-        tei <-
-            try(addTrackedEntityInstance(payload = payload), silent = TRUE)
+        tei <-try(addTrackedEntityInstance(payload = payload), silent = TRUE)
 
         # If error add tracked entity instance not do anything
-        if (!is.error(Id)) {
+        if (!is.error(tei)) {
             ## enrollement payload
             enroll_load <- list(
                 trackedEntityInstance  = tei,
@@ -39,8 +39,7 @@ loadJsonData <- function() {
                 incidentDate = enroll_date
             )
 
-            enroll_id <-
-                try(enrollInProgram(enroll_load), silent = TRUE)
+            enroll_id <-try(enrollInProgram(enroll_load), silent = TRUE)
 
 
             if (!is.error(enroll_id)) {
